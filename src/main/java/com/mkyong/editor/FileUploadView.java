@@ -11,12 +11,22 @@ import org.primefaces.model.UploadedFile;
 public class FileUploadView {
      
     private UploadedFile file;
+    
+    private int sizeLimit=1024000;
  
     public UploadedFile getFile() {
         return file;
     }
  
-    public void setFile(UploadedFile file) {
+    public int getSizeLimit() {
+		return sizeLimit;
+	}
+
+	public void setSizeLimit(int sizeLimit) {
+		this.sizeLimit = sizeLimit;
+	}
+
+	public void setFile(UploadedFile file) {
         this.file = file;
     }
      
